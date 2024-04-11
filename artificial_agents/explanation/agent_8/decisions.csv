@@ -1,0 +1,31 @@
+realConf,order,h_sch_1,h_sch_2,sub_val,binary_decision,normalized_conf,full_answer,tries
+0.0,1,PurchaseOrder.DeliverTo.Contact,PO.Contact.contactName,80,1,60,"80, 'Both terms refer to contact information, but Term B specifies the type of contact information as a name.'",1
+0.0,2,PurchaseOrder.DeliverTo.Contact,PO.Contact.contactEmail,100,1,100,"100, 'Both terms refer to contact information, and Term B specifies the type of contact information as an email.'",1
+1.0,3,PurchaseOrder.InvoiceTo.Contact.telephone,PO.Contact.contactPhone,20,0,60,"20, 'Term A refers to telephone numbers while Term B refers to contact phone numbers, but the instance examples have different formats.'",1
+0.0,4,PurchaseOrder.InvoiceTo.Contact,PO.Contact.contactName,90,1,80,"90, 'Both terms refer to contact information, but Term B specifies the type of contact information as a name.'",1
+1.0,5,PurchaseOrder.Header,PO.POHeader,40,0,20,"40, 'Both terms refer to a header, but there is no clear indication that they refer to identical concepts.'",1
+0.0,6,PurchaseOrder.InvoiceTo.Address.postalCode,PO.POShipTo.postalCode,70,1,40,"70, 'Both terms refer to postal codes and have similar instances, indicating a likely match.'",1
+1.0,7,PurchaseOrder.DeliverTo.Contact.telephone,PO.Contact.contactPhone,30,0,40,"30, 'Both terms refer to contact phone numbers, but the instance examples have different formats.'",1
+1.0,8,PurchaseOrder,PO,100,1,100,"100, 'Both terms have identical names and hierarchies, indicating an exact match.'",1
+0.0,9,PurchaseOrder.DeliverTo.Address.postalCode,PO.POBillTo.postalCode,60,1,20,"60, 'The terms refer to similar information, but the hierarchies and instance examples differ slightly, indicating a partial match.'",2
+1.0,10,PurchaseOrder.Header.Contact.telephone,PO.Contact.contactPhone,40,0,20,"40, 'Both terms refer to contact phone numbers, but the hierarchies and instance examples differ, indicating a potential partial match.'",1
+0.0,11,PurchaseOrder.DeliverTo.Address.stateProvince,PO.POBillTo.stateProvince,60,1,20,"60, 'Both terms refer to the state or province of an address, but the hierarchies and instance examples differ slightly, indicating a potential partial match.'",1
+0.0,12,PurchaseOrder.Header.ourAccountCode,PO.Contact.contactFunctionCode,10,0,80,"10, 'The terms have different names, types, instances, and hierarchies, indicating no match.'",1
+0.0,13,PurchaseOrder.Header.Contact.contactName,PO.Contact,20,0,60,"20, 'The terms have different names, types, instances, and hierarchies, indicating no match.'",1
+1.0,14,PurchaseOrder.Header.orderDate,PO.POHeader.poDate,60,1,20,"60, 'Both terms refer to the date an order was placed, but the names and instance examples differ slightly, indicating a potential partial match.'",1
+0.0,15,PurchaseOrder.Header.ourAccountCode,PO.POBillTo.postalCode,20,0,60,"20, 'The terms have different names, types, instances, and hierarchies, indicating no match.'",1
+1.0,16,PurchaseOrder.Items.Item.partNumber,PO.POLines.Item.partNo,80,1,60,"80, 'Both terms refer to a part or item number, and the instance examples are similar.'",1
+0.0,17,PurchaseOrder.Items,PO.POLines.Item,90,1,80,"90, 'Both terms refer to a collection of items, but Term B specifies a subcategory of items as POLines, indicating a likely match.'",1
+0.0,18,PurchaseOrder.InvoiceTo.Contact.contactName,PO.Contact,20,0,60,"20, 'The terms have different names, types, instances, and hierarchies, indicating no match.'",1
+0.0,19,PurchaseOrder.Items.Item.salesValue,PO.Contact,10,0,80,"10, 'The terms have different names, types, instances, and hierarchies, indicating no match.'",1
+1.0,20,PurchaseOrder.Header.Contact.e-mail,PO.Contact.contactEmail,90,1,80,"90, 'Both terms refer to email addresses, and the instance examples are similar.'",1
+0.0,21,PurchaseOrder.DeliverTo.Contact.companyName,PO.Contact.contactName,20,0,60,"20, 'The terms have different names, types, instances, and hierarchies, indicating no match.'",1
+1.0,22,PurchaseOrder.Items.Item.quantity,PO.POLines.Item.qty,80,1,60,"80, 'Both terms refer to a quantity of items, and the instance examples are similar.'",1
+1.0,23,PurchaseOrder.DeliverTo,PO.POShipTo,80,1,60,"80, 'Both terms refer to a shipping destination, and the hierarchy and instance examples are similar.'",1
+0.0,24,PurchaseOrder.Items.itemCount,PO.POLines.Item,60,1,20,"60, 'The terms refer to items, but the hierarchies and instance examples differ slightly, indicating a potential partial match.'",2
+1.0,25,PurchaseOrder.Items.itemCount,PO.POLines.count,90,1,80,"90, 'Both terms refer to the number of items, and the instance examples are similar.'",1
+1.0,26,PurchaseOrder.Header.orderNum,PO.POHeader.poNumber,70,1,40,"70, 'Both terms refer to an order number, and the instance examples are similar.'",1
+0.0,27,PurchaseOrder.InvoiceTo.Address,PO.POLines.Item.qty,10,0,80,"10, 'The terms have different names, types, instances, and hierarchies, indicating no match.'",1
+1.0,28,PurchaseOrder.InvoiceTo.Contact.e-mail,PO.Contact.contactEmail,80,1,60,"80, 'Both terms refer to email addresses, and the instance examples are similar.'",1
+1.0,29,PurchaseOrder.Items,PO.POLines,80,1,60,"80, 'Both terms refer to a collection of items, and the hierarchy and instance examples are similar.'",1
+1.0,30,PurchaseOrder.Items.Item.unitOfMeasure,PO.POLines.Item.uom,90,1,80,"90, 'Both terms refer to a unit of measure, and the instance examples are similar.'",1

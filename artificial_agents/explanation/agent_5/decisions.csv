@@ -1,0 +1,31 @@
+realConf,order,h_sch_1,h_sch_2,sub_val,binary_decision,normalized_conf,full_answer,tries
+0.0,1,PurchaseOrder.DeliverTo.Contact,PO.Contact.contactName,70,1,40,"70, 'Partial match - Contact and contactName are related to a contact person, but different schema hierarchies suggest potential mismatch.'",1
+0.0,2,PurchaseOrder.DeliverTo.Contact,PO.Contact.contactEmail,100,1,100,"100, 'Exact match - Both terms refer to contact information, with a clear hierarchy and matching instance examples.'",1
+1.0,3,PurchaseOrder.InvoiceTo.Contact.telephone,PO.Contact.contactPhone,60,1,20,"60, 'Possible match - Both terms refer to phone numbers, but different hierarchy and instance examples suggest a potential mismatch.'",1
+0.0,4,PurchaseOrder.InvoiceTo.Contact,PO.Contact.contactName,80,1,60,"80, 'Strong match - Both terms refer to contact person and have the same hierarchy, although missing instance examples.'",1
+1.0,5,PurchaseOrder.Header,PO.POHeader,90,1,80,"90, 'High match - Both terms clearly refer to the same schema element, with matching hierarchy and siblings.'",1
+0.0,6,PurchaseOrder.InvoiceTo.Address.postalCode,PO.POShipTo.postalCode,30,0,40,"30, 'Low match - Both terms refer to the same schema element, but with different hierarchy and instance examples.'",2
+1.0,7,PurchaseOrder.DeliverTo.Contact.telephone,PO.Contact.contactPhone,60,1,20,"60, 'Possible match - Both terms refer to phone numbers, but different hierarchy and instance examples suggest a potential mismatch.'",1
+1.0,8,PurchaseOrder,PO,100,1,100,"100, 'Exact match - Both terms represent the same schema element with matching name, type, instances, hierarchy, and siblings.'",1
+0.0,9,PurchaseOrder.DeliverTo.Address.postalCode,PO.POBillTo.postalCode,70,1,40,"70, 'Partial match - Both terms refer to postal code with different hierarchy and instances that suggest a potential mismatch.'",1
+1.0,10,PurchaseOrder.Header.Contact.telephone,PO.Contact.contactPhone,40,0,20,"40, 'Low match - Both terms refer to phone numbers, but different hierarchy and instance examples suggest a potential mismatch.'",2
+0.0,11,PurchaseOrder.DeliverTo.Address.stateProvince,PO.POBillTo.stateProvince,80,1,60,"80, 'High match - Both terms refer to the same schema element, with matching name, type, and siblings, despite different instance examples and hierarchy.'",1
+0.0,12,PurchaseOrder.Header.ourAccountCode,PO.Contact.contactFunctionCode,20,0,60,"20, 'Low match - Both terms have different names and hierarchy, and the instances suggest a potential mismatch.'",1
+0.0,13,PurchaseOrder.Header.Contact.contactName,PO.Contact,10,0,80,"10, 'Very low match - Both terms have different names, hierarchy, and type, and there is no clear relation between the instance examples.'",1
+1.0,14,PurchaseOrder.Header.orderDate,PO.POHeader.poDate,60,1,20,"60, 'Possible match - Both terms refer to an order date, but with different hierarchy and instance examples, suggesting a potential mismatch.'",1
+0.0,15,PurchaseOrder.Header.ourAccountCode,PO.POBillTo.postalCode,30,0,40,"30, 'Low match - Both terms have different names, hierarchy, type, and instance examples, suggesting a potential mismatch.'",1
+1.0,16,PurchaseOrder.Items.Item.partNumber,PO.POLines.Item.partNo,80,1,60,"80, 'High match - Both terms refer to a part number with matching type, hierarchy, and siblings, despite different instance examples.'",1
+0.0,17,PurchaseOrder.Items,PO.POLines.Item,100,1,100,"100, 'Exact match - Both terms represent the same schema element with matching name, type, instances, hierarchy, and siblings.'",1
+0.0,18,PurchaseOrder.InvoiceTo.Contact.contactName,PO.Contact,20,0,60,"20, 'Low match - Both terms have different names, hierarchy, type, and instance examples, suggesting a potential mismatch.'",1
+0.0,19,PurchaseOrder.Items.Item.salesValue,PO.Contact,10,0,80,"10, 'Very low match - Both terms have different names, hierarchy, and type, and there is no clear relation between the instance examples.'",1
+1.0,20,PurchaseOrder.Header.Contact.e-mail,PO.Contact.contactEmail,100,1,100,"100, 'Exact match - Both terms refer to an email with matching type, hierarchy, and siblings, and matching instance examples.'",1
+0.0,21,PurchaseOrder.DeliverTo.Contact.companyName,PO.Contact.contactName,30,0,40,"30, 'Low match - Both terms refer to different schema hierarchies with different instance examples and suggest a potential mismatch.'",1
+1.0,22,PurchaseOrder.Items.Item.quantity,PO.POLines.Item.qty,80,1,60,"80, 'High match - Both terms refer to the same schema element with matching type, hierarchy, and siblings, despite different instance examples.'",1
+1.0,23,PurchaseOrder.DeliverTo,PO.POShipTo,40,0,20,"40, 'Low match - Both terms refer to delivery information with different hierarchy and no clear relation between the instances, suggesting a potential mismatch.'",2
+0.0,24,PurchaseOrder.Items.itemCount,PO.POLines.Item,80,1,60,"80, 'High match - Both terms refer to the same schema element with matching type, hierarchy, and siblings, despite different instance examples.'",1
+1.0,25,PurchaseOrder.Items.itemCount,PO.POLines.count,80,1,60,"80, 'High match - Both terms refer to the same schema element with matching type, hierarchy, and siblings, despite different instance examples.'",1
+1.0,26,PurchaseOrder.Header.orderNum,PO.POHeader.poNumber,90,1,80,"90, 'High match - Both terms refer to an order number with matching type, hierarchy, and siblings, despite different instance examples.'",1
+0.0,27,PurchaseOrder.InvoiceTo.Address,PO.POLines.Item.qty,30,0,40,"30, 'Low match - Both terms refer to different schema hierarchies with different names and types and no clear relation between the instances.'",1
+1.0,28,PurchaseOrder.InvoiceTo.Contact.e-mail,PO.Contact.contactEmail,100,1,100,"100, 'Exact match - Both terms refer to an email with matching type, hierarchy, and siblings, and matching instance examples.'",1
+1.0,29,PurchaseOrder.Items,PO.POLines,40,0,20,"40, 'Low match - Both terms refer to items information with different hierarchy and no clear relation between the instances, suggesting a potential mismatch.'",2
+1.0,30,PurchaseOrder.Items.Item.unitOfMeasure,PO.POLines.Item.uom,80,1,60,"80, 'High match - Both terms refer to the same schema element with matching type, hierarchy, and siblings, despite different instance examples.'",1

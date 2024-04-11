@@ -1,0 +1,31 @@
+realConf,order,h_sch_1,h_sch_2,sub_val,binary_decision,normalized_conf,full_answer,tries
+0.0,1,PurchaseOrder.DeliverTo.Contact,PO.Contact.contactName,70,1,40,"70, strong semantic similarity and same entity type.",1
+0.0,2,PurchaseOrder.DeliverTo.Contact,PO.Contact.contactEmail,10,0,80,"10, different entity types and no semantic similarity.",1
+1.0,3,PurchaseOrder.InvoiceTo.Contact.telephone,PO.Contact.contactPhone,30,0,40,"30, some similarity in data type and hierarchy, but different naming conventions.",1
+0.0,4,PurchaseOrder.InvoiceTo.Contact,PO.Contact.contactName,90,1,80,"90, exact match in naming and same hierarchy level.",1
+1.0,5,PurchaseOrder.Header,PO.POHeader,80,1,60,"80, same entity type and high semantic similarity. Only naming convention differs.",1
+0.0,6,PurchaseOrder.InvoiceTo.Address.postalCode,PO.POShipTo.postalCode,20,0,60,"20, same property name but different hierarchy levels and no semantic similarity.",1
+1.0,7,PurchaseOrder.DeliverTo.Contact.telephone,PO.Contact.contactPhone,40,0,20,"40, some similarity in data type and hierarchy, but different naming conventions and different hierarchy level.",1
+1.0,8,PurchaseOrder,PO,100,1,100,"100, exact match in naming and hierarchy.",1
+0.0,9,PurchaseOrder.DeliverTo.Address.postalCode,PO.POBillTo.postalCode,45,0,10,"45, some similarity in property name, hierarchy level, and instance values, but different entity types.",2
+1.0,10,PurchaseOrder.Header.Contact.telephone,PO.Contact.contactPhone,30,0,40,"30, some similarity in data type and hierarchy, but different naming conventions and different hierarchy level.",1
+0.0,11,PurchaseOrder.DeliverTo.Address.stateProvince,PO.POBillTo.stateProvince,40,0,20,"40, same property name and hierarchy level, some similarity in instance values, but different entity types and no exact match.",1
+0.0,12,PurchaseOrder.Header.ourAccountCode,PO.Contact.contactFunctionCode,10,0,80,"10, different property names, entity types, and no semantic similarity.",1
+0.0,13,PurchaseOrder.Header.Contact.contactName,PO.Contact,10,0,80,"10, different property names, entity types, and no semantic similarity.",1
+1.0,14,PurchaseOrder.Header.orderDate,PO.POHeader.poDate,60,1,20,"60, some similarity in property name and instance values, but different hierarchy level and naming conventions.",1
+0.0,15,PurchaseOrder.Header.ourAccountCode,PO.POBillTo.postalCode,20,0,60,"20, no semantic similarity, different entity types, and different hierarchy levels.",1
+1.0,16,PurchaseOrder.Items.Item.partNumber,PO.POLines.Item.partNo,80,1,60,"80, high similarity in property name and instance values, and same hierarchy level.",1
+0.0,17,PurchaseOrder.Items,PO.POLines.Item,90,1,80,"90, high similarity in property name and hierarchy level.",1
+0.0,18,PurchaseOrder.InvoiceTo.Contact.contactName,PO.Contact,10,0,80,"10, different property names, entity types, and no semantic similarity.",1
+0.0,19,PurchaseOrder.Items.Item.salesValue,PO.Contact,5,0,90,"5, different property names and entity types, and no semantic similarity.",1
+1.0,20,PurchaseOrder.Header.Contact.e-mail,PO.Contact.contactEmail,80,1,60,"80, high similarity in property name and instance values, and same hierarchy level.",1
+0.0,21,PurchaseOrder.DeliverTo.Contact.companyName,PO.Contact.contactName,20,0,60,"20, different property names, entity types, and no semantic similarity.",1
+1.0,22,PurchaseOrder.Items.Item.quantity,PO.POLines.Item.qty,70,1,40,"70, high similarity in instance values, same data type and hierarchy level, but different property names.",1
+1.0,23,PurchaseOrder.DeliverTo,PO.POShipTo,80,1,60,"80, high similarity in property names and hierarchy level.",1
+0.0,24,PurchaseOrder.Items.itemCount,PO.POLines.Item,90,1,80,"90, exact property name match and same hierarchy level.",1
+1.0,25,PurchaseOrder.Items.itemCount,PO.POLines.count,70,1,40,"70, high similarity in instance values and data type, same hierarchy level, but different property names.",1
+1.0,26,PurchaseOrder.Header.orderNum,PO.POHeader.poNumber,80,1,60,"80, high similarity in property name and instance values, same hierarchy level.",1
+0.0,27,PurchaseOrder.InvoiceTo.Address,PO.POLines.Item.qty,10,0,80,"10, different property names, entity types, and no semantic similarity.",1
+1.0,28,PurchaseOrder.InvoiceTo.Contact.e-mail,PO.Contact.contactEmail,80,1,60,"80, high similarity in property name and instance values, and same hierarchy level.",1
+1.0,29,PurchaseOrder.Items,PO.POLines,90,1,80,"90, high similarity in property names and hierarchy level.",1
+1.0,30,PurchaseOrder.Items.Item.unitOfMeasure,PO.POLines.Item.uom,90,1,80,"90, high similarity in property names, instance values and same hierarchy level.",1

@@ -1,0 +1,278 @@
+role,content
+system,You are a crowdsource system user.
+user,"OVERVIEW
+Matching is a crucial element of integrating structured and semi-structured data. For instance, when multiple organizations are merged, both parties have to share information to be fused together into a new integrated system. Matching schemata is the first step in this process. Schema matching aims to find correspondences between concepts describing the meaning of data sources. Human-in-the-loop data integration, and specifically in matching, has been recently challenged by the big data era. With richer data source variety, bigger volumes, and faster velocity, accessing and making use of humans’ input has become much harder. Acknowledging cognitive awareness in human matching, InCognitoMatch (Introducing Cognitive Biases to Crowdsourced Matching) is a handy tool to validate, annotate, and correct correspondences using the crowd.
+
+THE TASK
+The following information provides a short overview and instructions necessary for participating in the task. Several element pairs will be introduced. Each pair consists of two terms, one from a candidate schema and one from target schema. To accompany each pair, additional properties will be introduced including term names and types, instance examples, schemata hierarchy, algorithmic matching result and a majority decision of the other participants. Your task is to provide a feedback, consists of a confidence level on a [0, 100] scale. a confidence level of 0 indicates an absolute no match, while a confidence level of 100 indicates an absolute match.
+Please note that you will not be able to choose a confidence level of 50. Make sure to provide the answer in the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required.
+Are you ready?"
+assistant,"Yes, I am ready to participate in the task."
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: Contact; col_type: none; Instances: ; Hierarchy: PurchaseOrder.DeliverTo.Contact; Siblings: Address;
+#
+Term B: col_name: contactName; col_type: str; Instances: Eden Barzilay, shiran elad, Rani Rahav, moshe ve banav, Ms Einat Hadar; Hierarchy: PO.Contact.contactName; Siblings: contactFunctionCode, contactEmail, contactPhone;
+"
+assistant,"100, 30"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: Contact; col_type: none; Instances: ; Hierarchy: PurchaseOrder.DeliverTo.Contact; Siblings: Address;
+#
+Term B: col_name: contactEmail; col_type: str; Instances: marinab@hotmail.com, ranir@gmail.com, moshban@gmail.com, moshbd@hotmail.com, shirane@mail.com; Hierarchy: PO.Contact.contactEmail; Siblings: contactName, contactFunctionCode, contactPhone;
+"
+assistant,"0, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: telephone; col_type: str; Instances: (458) 568-4587, 03-9823373, (623) 643-0399, (877) 647-0788, (623) 453-2670; Hierarchy: PurchaseOrder.InvoiceTo.Contact.telephone; Siblings: contactName, companyName, e-mail;
+#
+Term B: col_name: contactPhone; col_type: str; Instances: 08-293847, 03-234289, 08-354682, 03-234756, 04-293874; Hierarchy: PO.Contact.contactPhone; Siblings: contactName, contactFunctionCode, contactEmail;
+"
+assistant,"50, 25"
+user,"50 IS NOT A VALID ANSWER, TRY AGAIN!
+
+Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: telephone; col_type: str; Instances: (458) 568-4587, 03-9823373, (623) 643-0399, (877) 647-0788, (623) 453-2670; Hierarchy: PurchaseOrder.InvoiceTo.Contact.telephone; Siblings: contactName, companyName, e-mail;
+#
+Term B: col_name: contactPhone; col_type: str; Instances: 08-293847, 03-234289, 08-354682, 03-234756, 04-293874; Hierarchy: PO.Contact.contactPhone; Siblings: contactName, contactFunctionCode, contactEmail;
+"
+assistant,"70, 35"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: Contact; col_type: none; Instances: ; Hierarchy: PurchaseOrder.InvoiceTo.Contact; Siblings: Address;
+#
+Term B: col_name: contactName; col_type: str; Instances: Eden Barzilay, shiran elad, Rani Rahav, moshe ve banav, Ms Einat Hadar; Hierarchy: PO.Contact.contactName; Siblings: contactFunctionCode, contactEmail, contactPhone;
+"
+assistant,"90, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: Header; col_type: none; Instances: ; Hierarchy: PurchaseOrder.Header; Siblings: Items, DeliverTo, InvoiceTo, Footer;
+#
+Term B: col_name: POHeader; col_type: none; Instances: ; Hierarchy: PO.POHeader; Siblings: Contact, POShipTo, POBillTo, POLines;
+"
+assistant,"100, 30"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: postalCode; col_type: str; Instances: 56887, 86442, 26374, 13417, 28933; Hierarchy: PurchaseOrder.InvoiceTo.Address.postalCode; Siblings: street1, street2, street3, street4, stateProvince, country, city;
+#
+Term B: col_name: postalCode; col_type: str; Instances: 90339, 29988, 43399, 94433, 27766; Hierarchy: PO.POShipTo.postalCode; Siblings: city, attn, country, stateProvince, street1, street2, street3, street4, entityidentifider;
+"
+assistant,"80, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: telephone; col_type: str; Instances: (860) 832-2236, 03-2193822, (623) 643-0399, (623) 453-2670, 04-2637783; Hierarchy: PurchaseOrder.DeliverTo.Contact.telephone; Siblings: contactName, companyName, e-mail;
+#
+Term B: col_name: contactPhone; col_type: str; Instances: 08-293847, 03-234289, 08-354682, 03-234756, 04-293874; Hierarchy: PO.Contact.contactPhone; Siblings: contactName, contactFunctionCode, contactEmail;
+"
+assistant,"40, 30"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: PurchaseOrder; col_type: none; Instances: ; Hierarchy: PurchaseOrder; Siblings: ;
+#
+Term B: col_name: PO; col_type: none; Instances: ; Hierarchy: PO; Siblings: ;
+"
+assistant,"100, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: postalCode; col_type: str; Instances: 26534, 26374, 13417, 28933, 58997; Hierarchy: PurchaseOrder.DeliverTo.Address.postalCode; Siblings: street1, street2, street3, street4, stateProvince, country, city;
+#
+Term B: col_name: postalCode; col_type: str; Instances: 90339, 29988, 43399, 94433, 12332; Hierarchy: PO.POBillTo.postalCode; Siblings: city, attn, country, stateProvince, street1, street2, street3, street4, entityidentifider;
+"
+assistant,"60, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: telephone; col_type: str; Instances: (480) 503-7355, (458) 568-4587, 03-9823373, (877) 647-0788, 09-3847382; Hierarchy: PurchaseOrder.Header.Contact.telephone; Siblings: contactName, companyName, e-mail;
+#
+Term B: col_name: contactPhone; col_type: str; Instances: 08-293847, 03-234289, 08-354682, 03-234756, 04-293874; Hierarchy: PO.Contact.contactPhone; Siblings: contactName, contactFunctionCode, contactEmail;
+"
+assistant,"70, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: stateProvince; col_type: str; Instances: Arizona, CONNECTICUT, None, AZ; Hierarchy: PurchaseOrder.DeliverTo.Address.stateProvince; Siblings: street1, street2, street3, street4, postalCode, country, city;
+#
+Term B: col_name: stateProvince; col_type: str; Instances: None, nan; Hierarchy: PO.POBillTo.stateProvince; Siblings: city, attn, country, street1, street2, street3, street4, postalCode, entityidentifider;
+"
+assistant,"80, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: ourAccountCode; col_type: str; Instances: s6780, s7890, K45L56, d7836, d7654; Hierarchy: PurchaseOrder.Header.ourAccountCode; Siblings: orderNum, orderDate, yourAccountCode, Contact;
+#
+Term B: col_name: contactFunctionCode; col_type: str; Instances: c34801, w23230, p0998, d90008, c2003; Hierarchy: PO.Contact.contactFunctionCode; Siblings: contactName, contactEmail, contactPhone;
+"
+assistant,"0, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: contactName; col_type: str; Instances: Prof Ofer Shtrayhaman, Dr. Gilboa Barak, Patrick Stump, Mr Itay Hershko, Yulia Shkolnik; Hierarchy: PurchaseOrder.Header.Contact.contactName; Siblings: companyName, e-mail, telephone;
+#
+Term B: col_name: Contact; col_type: none; Instances: ; Hierarchy: PO.Contact; Siblings: POHeader, POShipTo, POBillTo, POLines;
+"
+assistant,"20, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: orderDate; col_type: str; Instances: 2020-07-24, 2013-12-08, 2005-07-01, 2013-05-13, 2012-05-18; Hierarchy: PurchaseOrder.Header.orderDate; Siblings: orderNum, ourAccountCode, yourAccountCode, Contact;
+#
+Term B: col_name: poDate; col_type: str; Instances: 2012-05-12T15:45:00, 2012-05-30T09:00:00, 2012-05-23T04:00:00, 2002-05-30T09:00:00; Hierarchy: PO.POHeader.poDate; Siblings: poNumber;
+"
+assistant,"90, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: ourAccountCode; col_type: str; Instances: s6780, s7890, K45L56, d7836, d7654; Hierarchy: PurchaseOrder.Header.ourAccountCode; Siblings: orderNum, orderDate, yourAccountCode, Contact;
+#
+Term B: col_name: postalCode; col_type: str; Instances: 90339, 29988, 43399, 94433, 12332; Hierarchy: PO.POBillTo.postalCode; Siblings: city, attn, country, stateProvince, street1, street2, street3, street4, entityidentifider;
+"
+assistant,"10, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: partNumber; col_type: str; Instances: i934, o975, y865, s667, f382; Hierarchy: PurchaseOrder.Items.Item.partNumber; Siblings: yourPartnerNumber, unitPrice, unitOfMeasure, salesValue, quantity, partDescription, itemNumber;
+#
+Term B: col_name: partNo; col_type: str; Instances: t899, h374, s259, u897, p689; Hierarchy: PO.POLines.Item.partNo; Siblings: uom, unitPrice, qty, line;
+"
+assistant,"80, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: Items; col_type: none; Instances: ; Hierarchy: PurchaseOrder.Items; Siblings: DeliverTo, InvoiceTo, Header, Footer;
+#
+Term B: col_name: Item; col_type: none; Instances: ; Hierarchy: PO.POLines.Item; Siblings: startAt, count;
+"
+assistant,"100, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: contactName; col_type: str; Instances: Prof Ofer Shtrayhaman, Dr. Gilboa Barak, Patrick Stump, Mr Itay Hershko, Yulia Shkolnik; Hierarchy: PurchaseOrder.InvoiceTo.Contact.contactName; Siblings: companyName, e-mail, telephone;
+#
+Term B: col_name: Contact; col_type: none; Instances: ; Hierarchy: PO.Contact; Siblings: POHeader, POShipTo, POBillTo, POLines;
+"
+assistant,"10, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: salesValue; col_type: Decimal; Instances: 30.4, 4581.458, 458772.74, 45962.255, 1300000; Hierarchy: PurchaseOrder.Items.Item.salesValue; Siblings: yourPartnerNumber, unitPrice, unitOfMeasure, quantity, partNumber, partDescription, itemNumber;
+#
+Term B: col_name: Contact; col_type: none; Instances: ; Hierarchy: PO.Contact; Siblings: POHeader, POShipTo, POBillTo, POLines;
+"
+assistant,"0, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: e-mail; col_type: str; Instances: amos@gmail.com, tlv@gmail.com, shuk@gmail.com, pet.dinklage@microsoft.com, arad@hotmail.com; Hierarchy: PurchaseOrder.Header.Contact.e-mail; Siblings: contactName, companyName, telephone;
+#
+Term B: col_name: contactEmail; col_type: str; Instances: marinab@hotmail.com, ranir@gmail.com, moshban@gmail.com, moshbd@hotmail.com, shirane@mail.com; Hierarchy: PO.Contact.contactEmail; Siblings: contactName, contactFunctionCode, contactPhone;
+"
+assistant,"90, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: companyName; col_type: str; Instances: Allegheny Technologies, Simbiyoniks, Dominion Resources, Arad Magvot, Atmos Energy; Hierarchy: PurchaseOrder.DeliverTo.Contact.companyName; Siblings: contactName, e-mail, telephone;
+#
+Term B: col_name: contactName; col_type: str; Instances: Eden Barzilay, shiran elad, Rani Rahav, moshe ve banav, Ms Einat Hadar; Hierarchy: PO.Contact.contactName; Siblings: contactFunctionCode, contactEmail, contactPhone;
+"
+assistant,"20, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: quantity; col_type: Decimal; Instances: 21, 2, 45.66, 4, 4580.550; Hierarchy: PurchaseOrder.Items.Item.quantity; Siblings: yourPartnerNumber, unitPrice, unitOfMeasure, salesValue, partNumber, partDescription, itemNumber;
+#
+Term B: col_name: qty; col_type: int; Instances: 30, 1000, 10, 237, 3000; Hierarchy: PO.POLines.Item.qty; Siblings: uom, unitPrice, partNo, line;
+"
+assistant,"70, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: DeliverTo; col_type: none; Instances: ; Hierarchy: PurchaseOrder.DeliverTo; Siblings: Items, InvoiceTo, Header, Footer;
+#
+Term B: col_name: POShipTo; col_type: none; Instances: ; Hierarchy: PO.POShipTo; Siblings: POHeader, Contact, POBillTo, POLines;
+"
+assistant,"100, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: itemCount; col_type: int; Instances: 15, 19, 5585, 457, 1223; Hierarchy: PurchaseOrder.Items.itemCount; Siblings: Item;
+#
+Term B: col_name: Item; col_type: none; Instances: ; Hierarchy: PO.POLines.Item; Siblings: startAt, count;
+"
+assistant,"30, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: itemCount; col_type: int; Instances: 15, 19, 5585, 457, 1223; Hierarchy: PurchaseOrder.Items.itemCount; Siblings: Item;
+#
+Term B: col_name: count; col_type: int; Instances: 3, 2, 1, 4; Hierarchy: PO.POLines.count; Siblings: startAt, Item;
+"
+assistant,"80, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: orderNum; col_type: str; Instances: PO937506, 5584785, PO283746, PO232477, 4587525; Hierarchy: PurchaseOrder.Header.orderNum; Siblings: orderDate, ourAccountCode, yourAccountCode, Contact;
+#
+Term B: col_name: poNumber; col_type: str; Instances: PO0900009, PO1300004, PO1300021, PO236597, PO1300003; Hierarchy: PO.POHeader.poNumber; Siblings: poDate;
+"
+assistant,"90, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: Address; col_type: none; Instances: ; Hierarchy: PurchaseOrder.InvoiceTo.Address; Siblings: Contact;
+#
+Term B: col_name: qty; col_type: int; Instances: 30, 1000, 10, 237, 3000; Hierarchy: PO.POLines.Item.qty; Siblings: uom, unitPrice, partNo, line;
+"
+assistant,"10, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: e-mail; col_type: str; Instances: ayala@tamam.il, bmw@hotmail.com, shuk@gmail.com, pet.dinklage@microsoft.com, arad@hotmail.com; Hierarchy: PurchaseOrder.InvoiceTo.Contact.e-mail; Siblings: contactName, companyName, telephone;
+#
+Term B: col_name: contactEmail; col_type: str; Instances: marinab@hotmail.com, ranir@gmail.com, moshban@gmail.com, moshbd@hotmail.com, shirane@mail.com; Hierarchy: PO.Contact.contactEmail; Siblings: contactName, contactFunctionCode, contactPhone;
+"
+assistant,"90, 25"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: Items; col_type: none; Instances: ; Hierarchy: PurchaseOrder.Items; Siblings: DeliverTo, InvoiceTo, Header, Footer;
+#
+Term B: col_name: POLines; col_type: none; Instances: ; Hierarchy: PO.POLines; Siblings: POHeader, Contact, POShipTo, POBillTo;
+"
+assistant,"100, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: unitOfMeasure; col_type: str; Instances: mg, unit, L, g, kg; Hierarchy: PurchaseOrder.Items.Item.unitOfMeasure; Siblings: yourPartnerNumber, unitPrice, salesValue, quantity, partNumber, partDescription, itemNumber;
+#
+Term B: col_name: uom; col_type: str; Instances: mg, unit, g, kg, ml; Hierarchy: PO.POLines.Item.uom; Siblings: unitPrice, qty, partNo, line;
+"
+assistant,"100, 20"
+user,"Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: contactName; col_type: str; Instances: Prof Ofer Shtrayhaman, Dr. Gilboa Barak, Patrick Stump, Mr Itay Hershko, Yulia Shkolnik; Hierarchy: PurchaseOrder.DeliverTo.Contact.contactName; Siblings: companyName, e-mail, telephone;
+#
+Term B: col_name: contactName; col_type: str; Instances: Eden Barzilay, shiran elad, Rani Rahav, moshe ve banav, Ms Einat Hadar; Hierarchy: PO.Contact.contactName; Siblings: contactFunctionCode, contactEmail, contactPhone;
+"
+assistant,"50, 20"
+user,"50 IS NOT A VALID ANSWER, TRY AGAIN!
+
+Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.
+The answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: 
+
+Term A: col_name: contactName; col_type: str; Instances: Prof Ofer Shtrayhaman, Dr. Gilboa Barak, Patrick Stump, Mr Itay Hershko, Yulia Shkolnik; Hierarchy: PurchaseOrder.DeliverTo.Contact.contactName; Siblings: companyName, e-mail, telephone;
+#
+Term B: col_name: contactName; col_type: str; Instances: Eden Barzilay, shiran elad, Rani Rahav, moshe ve banav, Ms Einat Hadar; Hierarchy: PO.Contact.contactName; Siblings: contactFunctionCode, contactEmail, contactPhone;
+"
+assistant,"80, 20"
