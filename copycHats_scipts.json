@@ -1,0 +1,89 @@
+{
+  "system_message": {
+    "basic": {
+      "description": "",
+      "content": "You are a crowdsource system user."
+    },
+    "zebra": {
+      "description": "The user is a zebra.",
+      "content": "You are a zebra! You can only go 'Equus Guagga'"
+    },
+    "expert": {
+      "description": "The user is an expert.",
+      "content": "You are a schema matching expert"
+    }
+  },
+  "overview_instructions": {
+    "basic": {
+      "description": "",
+      "content": "OVERVIEW\nMatching is a crucial element of integrating structured and semi-structured data. For instance, when multiple organizations are merged, both parties have to share information to be fused together into a new integrated system. Matching schemata is the first step in this process. Schema matching aims to find correspondences between concepts describing the meaning of data sources. Human-in-the-loop data integration, and specifically in matching, has been recently challenged by the big data era. With richer data source variety, bigger volumes, and faster velocity, accessing and making use of humans’ input has become much harder. Acknowledging cognitive awareness in human matching, InCognitoMatch (Introducing Cognitive Biases to Crowdsourced Matching) is a handy tool to validate, annotate, and correct correspondences using the crowd."
+    }
+  },
+  "task_instructions": {
+    "basic": {
+      "description": "",
+      "content": "THE TASK\nThe following information provides a short overview and instructions necessary for participating in the task. Several element pairs will be introduced. Each pair consists of two terms, one from a candidate schema and one from target schema. To accompany each pair, additional properties will be introduced including term names and types, instance examples, schemata hierarchy, algorithmic matching result and a majority decision of the other participants. Your task is to provide a feedback, consists of a confidence level on a [0, 100] scale. a confidence level of 0 indicates an absolute no match, while a confidence level of 100 indicates an absolute match.\nPlease note that you will not be able to choose a confidence level of 50. Make sure to provide the answer in the following format: '<integer>'. No further text is required.\nAre you ready?"
+    },
+    "short_explanation": {
+      "description": "'<integer>, <short_explanation>'. The explanation should be less than 50 words.",
+      "content": "THE TASK\nThe following information provides a short overview and instructions necessary for participating in the task. Several element pairs will be introduced. Each pair consists of two terms, one from a candidate schema and one from target schema. To accompany each pair, additional properties will be introduced including term names and types, instance examples, schemata hierarchy, algorithmic matching result and a majority decision of the other participants. Your task is to provide a feedback, consists of a confidence level on a [0, 100] scale. a confidence level of 0 indicates an absolute no match, while a confidence level of 100 indicates an absolute match.\nPlease note that you will not be able to choose a confidence level of 50. Make sure to provide the answer in the following format: '<integer>, <short_explanation>'. The explanation should be less than 50 words. No further text is required.\nAre you ready?"
+    },
+    "provide_time": {
+      "description": " format: '<integer>, <time>'",
+      "content": "THE TASK\nThe following information provides a short overview and instructions necessary for participating in the task. Several element pairs will be introduced. Each pair consists of two terms, one from a candidate schema and one from target schema. To accompany each pair, additional properties will be introduced including term names and types, instance examples, schemata hierarchy, algorithmic matching result and a majority decision of the other participants. Your task is to provide a feedback, consists of a confidence level on a [0, 100] scale. a confidence level of 0 indicates an absolute no match, while a confidence level of 100 indicates an absolute match.\nPlease note that you will not be able to choose a confidence level of 50. Make sure to provide the answer in the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required.\nAre you ready?"
+    }
+  },
+  "q_instructions": {
+    "basic": {
+      "description": "",
+      "content": "Make sure to provide an answer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.\nThe answer must be the following format: '<integer>'. No further text is required: "
+    },
+    "short_explanation": {
+      "description": "'<integer>, <short_explanation>' (less than 50 words)",
+      "content": "Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.\nThe answer must be the following format: '<integer>, <short_explanation>' (less than 50 words). No further text is required: "
+    },
+    "provide_time": {
+      "description": "'<integer>, <time>'",
+      "content": "Make sure to provide an integer between 1 and 100, while 50 ('I'm not sure') is not a valid answer.\nThe answer must be the following format: '<integer>, <time>', Where <time> is the time (seconds) it took you, as a human matcher, to read and decide for the question. No further text is required: "
+    }
+  },
+  "not_digits": {
+    "basic": {
+      "description": "",
+      "content": "NO FURTHER TEXT BEYOND THE CONFIDENT LEVEL IS REQUIRED. TRY AGAIN!\n"
+    },
+    "short_explanation": {
+      "description": "",
+      "content": "THE SHORT EXPLANATION MUST COME AFTER THE INTEGER! SEPERATED BY ', ': <integer>, <short_explanation>'. TRY AGAIN!\n"
+    },
+    "provide_time": {
+      "description": "",
+      "content": "NO FURTHER TEXT BEYOND THE CONFIDENT LEVEL AND TIME (seperated by ', ') IS REQUIRED. TRY AGAIN!\n"
+    }
+  },
+  "50_conf": {
+    "basic": {
+      "description": "",
+      "content": "50 IS NOT A VALID ANSWER, TRY AGAIN!\n"
+    }
+  },
+  "first": {
+    "basic": {
+      "description": "",
+      "content": ""
+    }
+  },
+  "long_explanation": {
+    "basic": {
+      "description": "",
+      "content": "EXPLANATION IS TOO LONG! MUST BE LESS THAN 50 WORDS. TRY AGAIN!\n"
+    }
+  },
+  "invalid_time": {
+    "basic": {
+      "description": "",
+      "content": "INVALID TIME! MUST BE A POSITIVE INTEGER ONLY, WITHOUT ANY OTHER WORDS! TRY AGAIN!\n"
+    }
+  }
+}
+
